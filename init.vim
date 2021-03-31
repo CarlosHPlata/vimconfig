@@ -7,6 +7,12 @@ Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 " }}}
 
@@ -24,10 +30,21 @@ set relativenumber
 set foldmethod=marker
 let mapleader=","
 
+" nerdTree config {{{
+let g:loaded_nerdtree_git_status = 1
+let g:NERDTreeShowGitStatus = 1
+let g:NERDTreeGitStatusShowClean = 1 " default: 0
+
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+" }}}
+
 " }}}
 
 " nvim theme config{{{
 let g:gruvbox_contrast_dark='hard'
+let g:airline_powerline_fonts = 1
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 " }}}
@@ -42,16 +59,18 @@ let NERDTreeQuitOnOpen = 1
 " }}}
 
 " auto closing string tags {{{ 
-inoremap <leader>' ''<Esc>i
-inoremap <leader>" ""<Esc>i
-inoremap <leader>( ()<Esc>i
-inoremap <leader>[ []<Esc>i
-inoremap <leader>{ {}<Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
 " }}}
 
 " auto ident {{{ 
 inoremap <leader>> <Esc>>>A
 inoremap <leader>< <Esc><<A
+nnoremap <leader>o o<Esc>
+
 " }}}
 
 " auto close tag {{{
@@ -62,6 +81,17 @@ inoremap <leader>cst </<Esc>2F<lyiwf/pa><Esc>F<i<CR><CR><Esc>kS
 " add semicolon to end of line w/o losing location {{{ 
 inoremap <leader>; <Esc>mlA;<Esc>`la
 nnoremap <leader>; mlA;<esc>`l
+
+inoremap <leader><leader> <Esc>mlA,<Esc>`la
+nnoremap <leader>, mlA,<Esc>`l
+" }}}
+
+" Edit and source inti.vim {{{
+
+" edit init.vim
+ nnoremap <leader>ve :e $MYVIMRC<cr>
+" source init.vim
+ nnoremap <leader>vs :so $MYVIMRC<cr>
 " }}}
 
 " }}}
