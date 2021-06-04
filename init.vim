@@ -3,16 +3,27 @@ call plug#begin()
 
 Plug 'morhetz/gruvbox'
 
-" IDE
-Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'HerringtonDarkholme/yats.vim'
+" Nerd Tree pluggins
+" Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+
+" Easy move with leader s
+Plug 'easymotion/vim-easymotion'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'preservim/nerdcommenter'
+Plug 'HerringtonDarkholme/yats.vim'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'vim-test/vim-test'
 call plug#end()
 " }}}
 
@@ -25,19 +36,24 @@ set clipboard=unnamed
 syntax enable
 set showcmd
 set encoding=utf-8
+set expandtab
+set ts=4
 set sw=4
+set shiftwidth=4
 set relativenumber
 set foldmethod=marker
 let mapleader=","
+let g:ctrlp_user_command = ['./git', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " nerdTree config {{{
-let g:loaded_nerdtree_git_status = 1
-let g:NERDTreeShowGitStatus = 1
+" let g:loaded_nerdtree_git_status = 1
+let g:NERDTreeGitStatusEnabled = 1
 let g:NERDTreeGitStatusShowClean = 1 " default: 0
 
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeGitStatusPorcelainVersion = 1
 " }}}
 
 " }}}
