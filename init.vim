@@ -2,6 +2,7 @@
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 " Nerd Tree pluggins
 " Plug 'scrooloose/nerdtree'
@@ -30,6 +31,7 @@ call plug#end()
 "configuracion de nvim {{{
 
 set number
+set cursorline
 set mouse=a
 set numberwidth=1
 set clipboard=unnamed
@@ -43,12 +45,14 @@ set shiftwidth=4
 set relativenumber
 set foldmethod=marker
 let mapleader=","
-let g:ctrlp_user_command = ['./git', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" let g:ctrlp_user_command = ['./git', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " nerdTree config {{{
 " let g:loaded_nerdtree_git_status = 1
 let g:NERDTreeGitStatusEnabled = 1
 let g:NERDTreeGitStatusShowClean = 1 " default: 0
+let g:NERDTreeShowHidden=1
+let g:NERDTreeWinSize=50
 
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
@@ -59,10 +63,12 @@ let g:NERDTreeGitStatusPorcelainVersion = 1
 " }}}
 
 " nvim theme config{{{
-let g:gruvbox_contrast_dark='hard'
-let g:airline_powerline_fonts = 1
-colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
+" let g:gruvbox_contrast_dark='hard'
+" let g:airline_powerline_fonts = 1
+" colorscheme gruvbox
+colorscheme onehalfdark 
+let g:airline_theme='onehalfdark'
+"hi Normal guibg=NONE ctermbg=NONE
 " }}}
 
 " mappings {{{
@@ -110,10 +116,19 @@ nnoremap <leader>, mlA,<Esc>`l
  nnoremap <leader>vs :so $MYVIMRC<cr>
 " }}}
 
+" javascript and typescript mappings {{{
+inoremap <leader>=; ()<Esc>hmmla => {};<Esc>hha<CR><CR><Esc>`ma
+inoremap <leader>=> ()<Esc>hmmla => {}<Esc>ha<CR><CR><Esc>`ma
+inoremap <leader>-> ()<Esc>hmmla => {}<Esc>`ma
+" }}}
+
 " }}}
 
 " COC Configuration {{{
 " =============================== COC CONFIGURATION =====================
+" set gui colorscheme
+
+hi! CocErrorSign guifg=#d1666a
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
