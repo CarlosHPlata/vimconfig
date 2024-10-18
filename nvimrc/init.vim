@@ -1,4 +1,3 @@
-
 " Pluggins {{{
 call plug#begin()
 
@@ -36,8 +35,13 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" eslint
+Plug 'dense-analysis/ale'
 
 Plug 'vim-test/vim-test'
+
+" for navigation between vim and tmux
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 " }}}
 
@@ -61,9 +65,8 @@ syntax enable
 set showcmd
 set encoding=utf-8
 set expandtab
-set ts=4
-set sw=4
-set shiftwidth=4
+set ts=2
+set sw=2
 set relativenumber
 " set foldmethod=marker
 set foldmethod=expr
@@ -362,6 +365,20 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+
+" }}}
+
+
+" eslint ale configs {{{
+
+let g:ale_fixers = {
+    \ 'javascript': ['prettier', 'eslint'],
+    \ 'typescript': ['prettier', 'eslint']
+    \ }
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+let g:ale_fix_on_save = 1
 
 " }}}
 
