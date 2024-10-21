@@ -31,23 +31,23 @@ return {
 			})
 
 			vim.keymap.set({ "n", "v" }, "<leader>cop", function()
-        local input = vim.fn.input("Ask copilot: ")
-        if input ~= "" then
-          return "<cmd>CopilotChat<space>" .. input .. "<cr>"
-        end
-			end, { expr = true })
+				local input = vim.fn.input("Ask copilot: ")
+				if input ~= "" then
+					return "<cmd>CopilotChat<space>" .. input .. "<cr>"
+				end
+			end, { expr = true, desc = "Ask copilot [CopilotC-Nvim/CopilotChat.nvim]" })
 
-			vim.keymap.set({"n", "v"}, "<leader>cof", function()
-				local input = vim.fn.input("[Entire File] Ask copilot: ")
+			vim.keymap.set({ "n", "v" }, "<leader>cof", function()
+				local input = vim.fn.input("[File] Ask copilot: ")
 				if input ~= "" then
 					require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
 				end
-			end, {})
+			end, { desc = "Ask copilot for a file [CopilotC-Nvim/CopilotChat.nvim]"} )
 
 			vim.keymap.set({ "n", "v" }, "<leader>coh", function()
 				local actions = require("CopilotChat.actions")
 				require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
-			end, {})
+			end, { desc = "Ask copilot for a help [CopilotC-Nvim/CopilotChat.nvim]" })
 		end,
 	},
 }
