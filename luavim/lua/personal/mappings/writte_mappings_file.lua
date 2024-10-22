@@ -38,19 +38,20 @@ end
 local function write_mappings_to_file()
 	local modes = { "n", "v", "i" }
 	local filtered_mappings = {}
-
 	for _, mode in ipairs(modes) do
 		local mappings = vim.api.nvim_get_keymap(mode)
 		for _, map in ipairs(mappings) do
-			table.insert(filtered_mappings, {
-				mode = mode,
-				lhs = map.lhs,
-				rhs = map.rhs,
-				desc = map.desc,
-			})
+			if map.desc then
+				table.insert(filtered_mappings, {
+					mode = mode,
+					lhs = map.lhs,
+					rhs = map.rhs,
+					desc = map.desc,
+				})
+			end
+			-- If desc is not present, you can handle it here if needed
 		end
 	end
-
 	local json_mappings = encode_to_json(filtered_mappings)
 	local file_path = vim.fn.stdpath("config") .. "/" .. FILE_NAME
 	local file = io.open(file_path, "w")

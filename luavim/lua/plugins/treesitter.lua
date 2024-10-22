@@ -13,12 +13,12 @@
   ensure_installed = "maintained"
 ]]
 return {
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  opts = {
-    auto_install = true, -- this will auto install language support when opening a file
-    sync_install = false,
-    highlight = { enable = true },
-    indent = { enable = true },  
-  },
+	"nvim-treesitter/nvim-treesitter",
+	build = ":TSUpdate",
+	opts = {
+		auto_install = true, -- this will auto install language support when opening a file
+		sync_install = false,
+		highlight = { enable = true },
+		indent = { enable = true },
+	},
 }

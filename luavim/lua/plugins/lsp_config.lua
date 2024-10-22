@@ -10,7 +10,7 @@
     This package provides the LSP parsers. You can use:
       :Mason
     to check and install LSP parsers.
-    More information can be found here: 
+    More information can be found here:
     https://github.com/williamboman/mason.nvim
 
   2. mason-lspconfig.nvim
@@ -26,7 +26,7 @@
       :LspInfo
     - You can check extended functionality of available functions with vim bindings by using:
       :h vim.lsp.buf
-    More information can be found here: 
+    More information can be found here:
     https://github.com/neovim/nvim-lspconfig
 
   TO INSTALL A NEW LSP CONFIGURATION:
@@ -37,43 +37,44 @@
     3. Add the required configuration setup to nvim-lspconfig.
 --]]
 return {
-  {
-    "williamboman/mason.nvim",
-    config = function()
-      require('mason').setup()
-    end,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
-        -- Add new LSP parsers here for step 2
-        ensure_installed = { "lua_ls", "ts_ls", "rust_analyzer" }
-      })
-    end,
-  },
-  {
-    'neovim/nvim-lspconfig',
-    config = function()
-      -- The following lines are only available if you have an auto_complete plugin file
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	{
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("mason-lspconfig").setup({
+				-- Add new LSP parsers here for step 2
+				ensure_installed = { "lua_ls", "ts_ls", "rust_analyzer" },
+			})
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			-- The following lines are only available if you have an auto_complete plugin file
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspOptions = { capabilities = capabilities }
-      --
-      -- Otherwise, uncomment this line
-      -- local lspOptions = {}
-      --
-      local lspconfig = require("lspconfig")
+			--
+			-- Otherwise, uncomment this line
+			-- local lspOptions = {}
+			--
+			local lspconfig = require("lspconfig")
 
-      -- Add your new configurations here for step 3
-      lspconfig.lua_ls.setup(lspOptions)
-      lspconfig.ts_ls.setup(lspOptions)
-      lspconfig.rust_analyzer.setup(lspOptions)
+			-- Add your new configurations here for step 3
+			lspconfig.lua_ls.setup(lspOptions)
+			lspconfig.ts_ls.setup(lspOptions)
+			lspconfig.rust_analyzer.setup(lspOptions)
 
-      -- Keymaps for LSP configuration
-      vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, {}) -- Open documentation pane for symbol under cursor
-      vim.keymap.set("n", "<leader>gt", vim.lsp.buf.definition, {}) -- Go to definition of symbol under cursor
-      vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {}) -- Go to implementation of symbol under cursor
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- Open the code actions pane to help fix errors in your code
-    end
-  }
+			-- Keymaps for LSP configuration
+			vim.keymap.set( "n", "<leader>d",  vim.lsp.buf.hover,           { desc = "Open documentation pane for symbol under cursor" })
+			vim.keymap.set( "n", "<leader>gt", vim.lsp.buf.definition,      { desc = "Go to definition of symbol under cursor" })
+			vim.keymap.set( "n", "<leader>gi", vim.lsp.buf.implementation,  { desc = "Go to implementation of symbol under cursor" })
+			vim.keymap.set( "n", "<leader>ca", vim.lsp.buf.code_action,     { desc = "Open the code actions pane to help fix errors in your code" })
+			vim.keymap.set( "n", "<leader>rn", vim.lsp.buf.rename,          { desc = "Rename the symbol under the cursor" })
+		end,
+	},
 }
