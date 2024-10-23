@@ -9,7 +9,14 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-		vim.keymap.set("n", "<leader>nt", ":Neotree toggle<CR>", { desc = "Toggle Neotree file explorer [neo-tree.nvim]" })
+		require("functions.register_mappings")
+		Keymap(
+			"n",
+			"<leader>nt",
+			":Neotree toggle<CR>",
+			{ desc = "Toggle Neotree file explorer [neo-tree.nvim]" },
+      "neo-tree.nvim"
+		)
 
 		require("neo-tree").setup({
 			event_handlers = {

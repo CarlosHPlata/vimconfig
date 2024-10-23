@@ -13,6 +13,8 @@
   check here:
     https://github.com/CopilotC-Nvim/CopilotChat.nvim
 ]]
+require("functions.register_mappings")
+
 return {
 	{
 		"github/copilot.vim",
@@ -30,24 +32,24 @@ return {
 				debug = false, -- Enable debug logging
 			})
 
-			vim.keymap.set({ "n", "v" }, "<leader>cop", function()
+			Keymap({ "n", "v" }, "<leader>cop", function()
 				local input = vim.fn.input("Ask copilot: ")
 				if input ~= "" then
 					return "<cmd>CopilotChat<space>" .. input .. "<cr>"
 				end
-			end, { expr = true, desc = "Ask copilot [CopilotC-Nvim/CopilotChat.nvim]" })
+			end, { expr = true, desc = "Ask copilot [CopilotC-Nvim/CopilotChat.nvim]" }, "CopilotChat")
 
-			vim.keymap.set({ "n", "v" }, "<leader>cof", function()
+			Keymap({ "n", "v" }, "<leader>cof", function()
 				local input = vim.fn.input("[File] Ask copilot: ")
 				if input ~= "" then
 					require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
 				end
-			end, { desc = "Ask copilot for a file [CopilotC-Nvim/CopilotChat.nvim]"} )
+			end, { desc = "Ask copilot for a file [CopilotC-Nvim/CopilotChat.nvim]" }, "CopilotChat")
 
-			vim.keymap.set({ "n", "v" }, "<leader>coh", function()
+			Keymap({ "n", "v" }, "<leader>coh", function()
 				local actions = require("CopilotChat.actions")
 				require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
-			end, { desc = "Ask copilot for a help [CopilotC-Nvim/CopilotChat.nvim]" })
+			end, { desc = "Ask copilot for a help [CopilotC-Nvim/CopilotChat.nvim]" }, "CopilotChat")
 		end,
 	},
 }

@@ -5,6 +5,8 @@
   check here:
     https://github.com/rmagatti/auto-session
 ]]
+require("functions.register_mappings")
+
 return {
 	"rmagatti/auto-session",
 	config = function()
@@ -20,11 +22,12 @@ return {
 			},
 		})
 
-		vim.keymap.set(
+		Keymap(
 			"n",
 			"<leader>ls",
 			require("auto-session.session-lens").search_session,
-			{ noremap = true, silent = true, desc = "Search for a session [rmagatti/auto-session]" }
+			{ noremap = true, silent = true, desc = "Search for a session [rmagatti/auto-session]" },
+      "auto-session"
 		)
 	end,
 }

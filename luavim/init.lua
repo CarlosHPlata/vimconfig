@@ -1,7 +1,9 @@
 vim.g.mapleader = ","
 
+require("functions.cheatsheet")
+
 --init configurations
-require("personal.start")
+require("personal.set")
 
 --mappings
 require("personal.mappings")

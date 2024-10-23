@@ -35,6 +35,7 @@ return {
 	},
 	config = function()
 		local null_ls = require("null-ls")
+		require("functions.register_mappings")
 		null_ls.setup({
 			sources = {
 				require("none-ls.diagnostics.eslint_d"),
@@ -45,6 +46,12 @@ return {
 
 		-- this next line require lsp_config to work properly
 		-- it binds to format the code using a formatter from a lsp parser
-		vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format, { desc = "Format the code of the current file using LSP [none-ls]" })
+		Keymap(
+			"n",
+			"<leader>fc",
+			vim.lsp.buf.format,
+			{ desc = "Format the code of the current file using LSP [none-ls]" },
+      "none-ls"
+		)
 	end,
 }

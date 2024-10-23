@@ -55,6 +55,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+      require("functions.register_mappings")
 			-- The following lines are only available if you have an auto_complete plugin file
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspOptions = { capabilities = capabilities }
@@ -70,11 +71,11 @@ return {
 			lspconfig.rust_analyzer.setup(lspOptions)
 
 			-- Keymaps for LSP configuration
-			vim.keymap.set( "n", "<leader>d",  vim.lsp.buf.hover,           { desc = "Open documentation pane for symbol under cursor" })
-			vim.keymap.set( "n", "<leader>gt", vim.lsp.buf.definition,      { desc = "Go to definition of symbol under cursor" })
-			vim.keymap.set( "n", "<leader>gi", vim.lsp.buf.implementation,  { desc = "Go to implementation of symbol under cursor" })
-			vim.keymap.set( "n", "<leader>ca", vim.lsp.buf.code_action,     { desc = "Open the code actions pane to help fix errors in your code" })
-			vim.keymap.set( "n", "<leader>rn", vim.lsp.buf.rename,          { desc = "Rename the symbol under the cursor" })
+			Keymap( "n", "<leader>d",  vim.lsp.buf.hover,           { desc = "Open documentation pane for symbol under cursor" }, "nvim-lspconfig")
+			Keymap( "n", "<leader>gt", vim.lsp.buf.definition,      { desc = "Go to definition of symbol under cursor" }, "nvim-lspconfig")
+			Keymap( "n", "<leader>gi", vim.lsp.buf.implementation,  { desc = "Go to implementation of symbol under cursor" }, "nvim-lspconfig")
+			Keymap( "n", "<leader>ca", vim.lsp.buf.code_action,     { desc = "Open the code actions pane to help fix errors in your code" }, "nvim-lspconfig")
+			Keymap( "n", "<leader>rn", vim.lsp.buf.rename,          { desc = "Rename the symbol under the cursor" }, "nvim-lspconfig")
 		end,
 	},
 }

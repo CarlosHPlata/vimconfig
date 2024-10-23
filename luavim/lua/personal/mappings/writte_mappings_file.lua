@@ -64,5 +64,7 @@ local function write_mappings_to_file()
 	end
 end
 
--- Call the function to write the mappings to the file
-vim.keymap.set({ "n" }, "<leader>vw", write_mappings_to_file, {})
+function WriteMappings()
+  write_mappings_to_file()
+end
+

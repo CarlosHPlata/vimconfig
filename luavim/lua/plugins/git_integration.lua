@@ -14,19 +14,28 @@ return {
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
+			require("functions.register_mappings")
 			require("gitsigns").setup()
-			vim.keymap.set(
+			Keymap(
 				"n",
 				"<leader>gp",
 				":Gitsigns preview_hunk<CR>",
-				{ desc = "Preview Git hunk [gitsigns.nvim]" }
+				{ desc = "Preview Git hunk [gitsigns.nvim]" },
+        "gitsigns.nvim"
 			)
 		end,
 	},
 	{
 		"tpope/vim-fugitive",
 		config = function()
-			vim.keymap.set("n", "<leader>gb", ":Git blame<CR>", { desc = "Show Git blame for the current file [vim-fugitive]" })
+			require("functions.register_mappings")
+			Keymap(
+				"n",
+				"<leader>gb",
+				":Git blame<CR>",
+				{ desc = "Show Git blame for the current file [vim-fugitive]" },
+        "vim-fugitive"
+			)
 		end,
 	},
 }
