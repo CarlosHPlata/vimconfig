@@ -37,19 +37,19 @@ return {
 				if input ~= "" then
 					return "<cmd>CopilotChat<space>" .. input .. "<cr>"
 				end
-			end, { expr = true, desc = "Ask copilot [CopilotC-Nvim/CopilotChat.nvim]" }, "CopilotChat")
+			end, { expr = true, desc = "Ask copilot" }, "CopilotChat")
 
 			Keymap({ "n", "v" }, "<leader>cof", function()
 				local input = vim.fn.input("[File] Ask copilot: ")
 				if input ~= "" then
 					require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
 				end
-			end, { desc = "Ask copilot for a file [CopilotC-Nvim/CopilotChat.nvim]" }, "CopilotChat")
+			end, { desc = "Ask copilot for a file" }, "CopilotChat")
 
 			Keymap({ "n", "v" }, "<leader>coh", function()
 				local actions = require("CopilotChat.actions")
 				require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
-			end, { desc = "Ask copilot for a help [CopilotC-Nvim/CopilotChat.nvim]" }, "CopilotChat")
+			end, { desc = "Ask copilot for a help" }, "CopilotChat")
 		end,
 	},
 }

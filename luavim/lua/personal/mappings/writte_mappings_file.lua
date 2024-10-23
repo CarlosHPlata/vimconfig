@@ -36,26 +36,13 @@ end
 
 -- Function to write key mappings for n, v, i modes to a .txt file in JSON format
 local function write_mappings_to_file()
-	local modes = { "n", "v", "i" }
-	local filtered_mappings = {}
-	for _, mode in ipairs(modes) do
-		local mappings = vim.api.nvim_get_keymap(mode)
-		for _, map in ipairs(mappings) do
-			if map.desc then
-				table.insert(filtered_mappings, {
-					mode = mode,
-					lhs = map.lhs,
-					rhs = map.rhs,
-					desc = map.desc,
-				})
-			end
-			-- If desc is not present, you can handle it here if needed
-		end
-	end
-	local json_mappings = encode_to_json(filtered_mappings)
+  require("functions.register_mappings")
+  local mappings = Get_keymap()
+  local json_mappings = encode_to_json(mappings)
+
 	local file_path = vim.fn.stdpath("config") .. "/" .. FILE_NAME
-	local file = io.open(file_path, "w")
-	if file then
+  local file = io.open(file_path, "w")
+  if file then
 		file:write(json_mappings)
 		file:close()
 		print("Key mappings written to " .. file_path)

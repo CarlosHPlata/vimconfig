@@ -14,7 +14,7 @@ return {
 			"n",
 			"<leader>nt",
 			":Neotree toggle<CR>",
-			{ desc = "Toggle Neotree file explorer [neo-tree.nvim]" },
+			{ desc = "Toggle Neotree file explorer" },
       "neo-tree.nvim"
 		)
 

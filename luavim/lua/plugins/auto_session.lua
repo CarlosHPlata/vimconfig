@@ -26,7 +26,7 @@ return {
 			"n",
 			"<leader>ls",
 			require("auto-session.session-lens").search_session,
-			{ noremap = true, silent = true, desc = "Search for a session [rmagatti/auto-session]" },
+			{ noremap = true, silent = true, desc = "Search for a session" },
       "auto-session"
 		)
 	end,

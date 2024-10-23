@@ -22,11 +22,11 @@ return {
       require("functions.register_mappings")
       local builtin = require("telescope.builtin")
 
-      Keymap("n", "<C-p>", builtin.git_files, { desc = "Telescope find git files [telescope.nvim]" }, "telescope.nvim")
-      Keymap("n", "<C-P>", builtin.find_files, { desc = "Telescope find files [telescope.nvim]" }, "telescope.nvim")
-      Keymap("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep [telescope.vim]" }, "telescope.vim")
-      Keymap("n", "<leader>fb", builtin.buffers, { desc = "Telescope vim buffers [telescope.vim]" }, "telescope.vim")
-      -- Keymap('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags [telescope.vim]' }, 'telescope.vim')
+      Keymap("n", "<C-p>", builtin.git_files, { desc = "Telescope find git files" }, "telescope.nvim")
+      Keymap("n", "<C-P>", builtin.find_files, { desc = "Telescope find files" }, "telescope.nvim")
+      Keymap("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" }, "telescope.vim")
+      Keymap("n", "<leader>fb", builtin.buffers, { desc = "Telescope vim buffers" }, "telescope.vim")
+      -- Keymap('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' }, 'telescope.vim')
     end,
   },
   {

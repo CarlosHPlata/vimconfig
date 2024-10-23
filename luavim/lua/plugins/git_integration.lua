@@ -20,7 +20,7 @@ return {
 				"n",
 				"<leader>gp",
 				":Gitsigns preview_hunk<CR>",
-				{ desc = "Preview Git hunk [gitsigns.nvim]" },
+				{ desc = "Preview Git hunk" },
         "gitsigns.nvim"
 			)
 		end,
@@ -33,7 +33,7 @@ return {
 				"n",
 				"<leader>gb",
 				":Git blame<CR>",
-				{ desc = "Show Git blame for the current file [vim-fugitive]" },
+				{ desc = "Show Git blame for the current file" },
         "vim-fugitive"
 			)
 		end,

@@ -38,7 +38,7 @@ return {
 		require("functions.register_mappings")
 		null_ls.setup({
 			sources = {
-				require("none-ls.diagnostics.eslint_d"),
+				-- require("none-ls.diagnostics.eslint_d"),
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
 			},
@@ -50,7 +50,7 @@ return {
 			"n",
 			"<leader>fc",
 			vim.lsp.buf.format,
-			{ desc = "Format the code of the current file using LSP [none-ls]" },
+			{ desc = "Format the code of the current file using LSP" },
       "none-ls"
 		)
 	end,

@@ -1,1 +1,482 @@
-[{"desc":"Enclose word with double quotes in normal mode","mode":"n","rhs":"mmbi\"<Esc>ea\"<Esc>`m<Right>","lhs":"\""},{"desc":":help &-default","mode":"n","rhs":":&&<CR>","lhs":"&"},{"desc":"Enclose word with single quotes in normal mode","mode":"n","rhs":"mmbi'<Esc>ea'<Esc>`m<Right>","lhs":"'"},{"desc":"Enclose word with parentheses in normal mode","mode":"n","rhs":"mmbi(<Esc>ea)<Esc>`m<Right>","lhs":"("},{"desc":"Search for a session [rmagatti/auto-session]","mode":"n","lhs":",ls"},{"desc":"Ask copilot for a help [CopilotC-Nvim/CopilotChat.nvim]","mode":"n","lhs":",coh"},{"desc":"Ask copilot for a file [CopilotC-Nvim/CopilotChat.nvim]","mode":"n","lhs":",cof"},{"desc":"Ask copilot [CopilotC-Nvim/CopilotChat.nvim]","mode":"n","lhs":",cop"},{"desc":"Toggle Neotree file explorer [neo-tree.nvim]","mode":"n","rhs":":Neotree toggle<CR>","lhs":",nt"},{"desc":"Preview Git hunk [gitsigns.nvim]","mode":"n","rhs":":Gitsigns preview_hunk<CR>","lhs":",gp"},{"desc":"Show Git blame for the current file [vim-fugitive]","mode":"n","rhs":":Git blame<CR>","lhs":",gb"},{"desc":"Telescope vim buffers [telescope.vim]","mode":"n","lhs":",fb"},{"desc":"Telescope live grep [telescope.vim]","mode":"n","lhs":",fg"},{"desc":"Format the code of the current file using LSP [none-ls]","mode":"n","lhs":",fc"},{"desc":"Visit the last test file [vim-test]","mode":"n","rhs":":TestVisit<CR>","lhs":",g"},{"desc":"Run the last test [vim-test]","mode":"n","rhs":":TestLast<CR>","lhs":",l"},{"desc":"Run the entire test suite [vim-test]","mode":"n","rhs":":TestSuite<CR>","lhs":",a"},{"desc":"Run all tests in the current file [vim-test]","mode":"n","rhs":":TestFile<CR>","lhs":",T"},{"desc":"Run the nearest test [vim-test]","mode":"n","rhs":":TestNearest<CR>","lhs":",t"},{"desc":"Rename the symbol under the cursor","mode":"n","lhs":",rn"},{"desc":"Open the code actions pane to help fix errors in your code","mode":"n","lhs":",ca"},{"desc":"Go to implementation of symbol under cursor","mode":"n","lhs":",gi"},{"desc":"Go to definition of symbol under cursor","mode":"n","lhs":",gt"},{"desc":"Edit the vim configuration file","mode":"n","rhs":"<Cmd>e $MYVIMRC<CR>","lhs":",ve"},{"desc":"Source the vim configuration file","mode":"n","rhs":"<Cmd>source $MYVIMRC<CR>","lhs":",vs"},{"desc":"Open documentation pane for symbol under cursor","mode":"n","lhs":",d"},{"desc":"Insert comma at the end of the line in normal mode","mode":"n","rhs":"mlA,<Esc>`l","lhs":",,"},{"desc":"Insert semicolon at the end of the line in normal mode","mode":"n","rhs":"mlA;<Esc>`l","lhs":",;"},{"desc":"Move to previous search result and center cursor","mode":"n","rhs":"Nzzv","lhs":"N"},{"desc":":help Y-default","mode":"n","rhs":"y$","lhs":"Y"},{"desc":"Enclose word with square brackets in normal mode","mode":"n","rhs":"mmbi[<Esc>ea]<Esc>`m<Right>","lhs":"["},{"desc":"Jump to the previous diagnostic","mode":"n","lhs":"[d"},{"desc":"Jump to the next diagnostic","mode":"n","lhs":"]d"},{"desc":"Toggle comment line","mode":"n","lhs":"gcc"},{"desc":"Toggle comment","mode":"n","lhs":"gc"},{"desc":"Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)","mode":"n","lhs":"gx"},{"desc":"Move to next search result and center cursor","mode":"n","rhs":"nzzv","lhs":"n"},{"desc":"Enclose word with curly braces in normal mode","mode":"n","rhs":"mmbi{<Esc>ea}<Esc>`m<Right>","lhs":"{"},{"desc":"LuaSnip: Repeat last node expansion","mode":"n","lhs":"<Plug>luasnip-expand-repeat"},{"desc":"LuaSnip: Removes current snippet from jumplist","mode":"n","lhs":"<Plug>luasnip-delete-check"},{"desc":"Telescope find files [telescope.nvim]","mode":"n","lhs":"<C-P>"},{"desc":"Navigate to the previous tmux pane [vim-tmux-navigator]","mode":"n","rhs":"<Cmd>TmuxNavigatePrevious<CR>","lhs":"<C-Bslash>"},{"desc":"Navigate to the left tmux pane [vim-tmux-navigator]","mode":"n","rhs":"<Cmd>TmuxNavigateLeft<CR>","lhs":"<C-H>"},{"desc":"Navigate to the bottom tmux pane [vim-tmux-navigator]","mode":"n","rhs":"<Cmd>TmuxNavigateDown<CR>","lhs":"<C-J>"},{"desc":"Navigate to the top tmux pane [vim-tmux-navigator]","mode":"n","rhs":"<Cmd>TmuxNavigateUp<CR>","lhs":"<C-K>"},{"desc":"Scroll up and center cursor","mode":"n","rhs":"<C-U>zz","lhs":"<C-U>"},{"desc":"Scroll down and center cursor","mode":"n","rhs":"<C-D>zz","lhs":"<C-D>"},{"desc":"Show diagnostics under the cursor","mode":"n","rhs":"<C-W>d","lhs":"<C-W><C-D>"},{"desc":"Show diagnostics under the cursor","mode":"n","lhs":"<C-W>d"},{"desc":"Navigate to the right tmux pane [vim-tmux-navigator]","mode":"n","rhs":"<Cmd>TmuxNavigateRight<CR>","lhs":"<C-L>"},{"desc":"Enclose selection with double quotes in visual mode","mode":"v","rhs":"<Esc><lt>i\"<Esc>>a<Right>\"<Esc>","lhs":"\""},{"desc":":help v_#-default","mode":"v","lhs":"#"},{"desc":"Enclose selection with single quotes in visual mode","mode":"v","rhs":"<Esc><lt>i'<Esc>>a<Right>'<Esc>","lhs":"'"},{"desc":"Enclose selection with parentheses in visual mode","mode":"v","rhs":"<Esc><lt>i(<Esc>>a<Right>)<Esc>","lhs":"("},{"desc":":help v_star-default","mode":"v","lhs":"*"},{"desc":"Ask copilot for a help [CopilotC-Nvim/CopilotChat.nvim]","mode":"v","lhs":",coh"},{"desc":"Ask copilot for a file [CopilotC-Nvim/CopilotChat.nvim]","mode":"v","lhs":",cof"},{"desc":"Ask copilot [CopilotC-Nvim/CopilotChat.nvim]","mode":"v","lhs":",cop"},{"desc":"Paste after and send to black hole","mode":"v","rhs":"\"_dp","lhs":",d"},{"desc":"Paste before and send to black hole","mode":"v","rhs":"\"_dP","lhs":",p"},{"desc":":help v_@-default","mode":"v","rhs":"mode() ==# 'V' ? ':normal! @'.getcharstr().'<CR>' : '@'","lhs":"@"},{"desc":":help v_Q-default","mode":"v","rhs":"mode() ==# 'V' ? ':normal! @<C-R>=reg_recorded()<CR><CR>' : 'Q'","lhs":"Q"},{"desc":"Enclose selection with square brackets in visual mode","mode":"v","rhs":"<Esc><lt>i[<Esc>>a<Right>]<Esc>","lhs":"["},{"desc":"Toggle comment","mode":"v","lhs":"gc"},{"desc":"Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)","mode":"v","lhs":"gx"},{"desc":"Enclose selection with curly braces in visual mode","mode":"v","rhs":"<Esc><lt>i{<Esc>>a<Right>}<Esc>","lhs":"{"},{"desc":"LuaSnip: Jump to the previous node","mode":"v","lhs":"<Plug>luasnip-jump-prev"},{"desc":"LuaSnip: Jump to the next node","mode":"v","lhs":"<Plug>luasnip-jump-next"},{"desc":"LuaSnip: Change to the previous choice from the choiceNode","mode":"v","lhs":"<Plug>luasnip-prev-choice"},{"desc":"LuaSnip: Change to the next choice from the choiceNode","mode":"v","lhs":"<Plug>luasnip-next-choice"},{"desc":"LuaSnip: Expand the current snippet","mode":"v","lhs":"<Plug>luasnip-expand-snippet"},{"desc":"LuaSnip: Expand or jump in the current snippet","mode":"v","lhs":"<Plug>luasnip-expand-or-jump"},{"desc":"LuaSnip: Repeat last node expansion","mode":"v","lhs":"<Plug>luasnip-expand-repeat"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<C-P>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<C-Space>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<C-N>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<C-F>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<Down>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<C-B>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<Up>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<C-Y>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<C-E>"},{"desc":"LuaSnip: Repeat last node expansion","mode":"i","lhs":"<Plug>luasnip-expand-repeat"},{"desc":"LuaSnip: Removes current snippet from jumplist","mode":"i","lhs":"<Plug>luasnip-delete-check"},{"desc":"LuaSnip: Jump to the previous node","mode":"i","lhs":"<Plug>luasnip-jump-prev"},{"desc":"LuaSnip: Jump to the next node","mode":"i","lhs":"<Plug>luasnip-jump-next"},{"desc":"LuaSnip: Change to the previous choice from the choiceNode","mode":"i","lhs":"<Plug>luasnip-prev-choice"},{"desc":"LuaSnip: Change to the next choice from the choiceNode","mode":"i","lhs":"<Plug>luasnip-next-choice"},{"desc":"LuaSnip: Expand the current snippet","mode":"i","lhs":"<Plug>luasnip-expand-snippet"},{"desc":"LuaSnip: Expand or jump in the current snippet","mode":"i","lhs":"<Plug>luasnip-expand-or-jump"},{"desc":":help i_CTRL-W-default","mode":"i","rhs":"<C-G>u<C-W>","lhs":"<C-W>"},{"desc":":help i_CTRL-U-default","mode":"i","rhs":"<C-G>u<C-U>","lhs":"<C-U>"},{"desc":"cmp.utils.keymap.set_map","mode":"i","lhs":"<CR>"},{"desc":"Auto-close double quotes","mode":"i","lhs":"\""},{"desc":"Auto-close single quotes","mode":"i","lhs":"'"},{"desc":"Auto-close parentheses","mode":"i","rhs":"()<Left>","lhs":"("},{"desc":"Auto-close parentheses with newline","mode":"i","rhs":"(<CR>)<C-O>O","lhs":"(<CR>"},{"desc":"Overwrite closing parenthesis if already closed","mode":"i","lhs":")"},{"desc":"Insert comma at the end of the line in insert mode","mode":"i","rhs":"<Esc>mlA,<Esc>`la","lhs":",,"},{"desc":"Insert semicolon at the end of the line in insert mode","mode":"i","rhs":"<Esc>mlA;<Esc>`la","lhs":",;"},{"desc":"Auto-close angle brackets","mode":"i","rhs":"<lt>><Left>","lhs":"<lt>"},{"desc":"Auto-close angle brackets with newline","mode":"i","rhs":"<lt><CR>><C-O>O","lhs":"<lt><CR>"},{"desc":"Overwrite closing angle bracket if already closed","mode":"i","lhs":">"},{"desc":"Auto-close square brackets","mode":"i","rhs":"[]<Left>","lhs":"["},{"desc":"Auto-close square brackets with newline","mode":"i","rhs":"[<CR>]<C-O>O","lhs":"[<CR>"},{"desc":"Overwrite closing square bracket if already closed","mode":"i","lhs":"]"},{"desc":"Auto-close backticks","mode":"i","lhs":"`"},{"desc":"Auto-close curly braces","mode":"i","rhs":"{}<Left>","lhs":"{"},{"desc":"Auto-close curly braces with newline","mode":"i","rhs":"{<CR>}<C-O>O","lhs":"{<CR>"},{"desc":"Overwrite closing curly brace if already closed","mode":"i","lhs":"}"}]
+[
+  {
+    "desc": "Insert semicolon at the end of the line in insert mode",
+    "plugin": "none",
+    "key": "<leader>;",
+    "action": "<Esc>mlA;<Esc>`la",
+    "mode": [
+      "i"
+    ]
+  },
+  {
+    "desc": "Insert semicolon at the end of the line in normal mode",
+    "plugin": "none",
+    "key": "<leader>;",
+    "action": "mlA;<Esc>`l",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Insert comma at the end of the line in insert mode",
+    "plugin": "none",
+    "key": "<leader><leader>",
+    "action": "<Esc>mlA,<Esc>`la",
+    "mode": [
+      "i"
+    ]
+  },
+  {
+    "desc": "Insert comma at the end of the line in normal mode",
+    "plugin": "none",
+    "key": "<leader><leader>",
+    "action": "mlA,<Esc>`l",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Scroll down and center cursor",
+    "plugin": "none",
+    "key": "<C-d>",
+    "action": "<C-d>zz",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Scroll up and center cursor",
+    "plugin": "none",
+    "key": "<C-u>",
+    "action": "<C-u>zz",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Move to next search result and center cursor",
+    "plugin": "none",
+    "key": "n",
+    "action": "nzzv",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Move to previous search result and center cursor",
+    "plugin": "none",
+    "key": "N",
+    "action": "Nzzv",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Print all the keymaps registered",
+    "plugin": "none",
+    "key": "<leader>csm",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Paste before and send to black hole",
+    "plugin": "none",
+    "key": "<leader>p",
+    "action": "\"_dP",
+    "mode": [
+      "x"
+    ]
+  },
+  {
+    "desc": "Paste after and send to black hole",
+    "plugin": "none",
+    "key": "<leader>d",
+    "action": "\"_dp",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Paste after and send to black hole",
+    "plugin": "none",
+    "key": "<leader>d",
+    "action": "\"_dp",
+    "mode": [
+      "v"
+    ]
+  },
+  {
+    "desc": "Move to the pane above",
+    "plugin": "none",
+    "key": "<c-k>",
+    "action": ":wincmd k<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Move to the pane below",
+    "plugin": "none",
+    "key": "<c-j>",
+    "action": ":wincmd j<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Move to the pane to the left",
+    "plugin": "none",
+    "key": "<c-h>",
+    "action": ":wincmd h<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Move to the pane to the right",
+    "plugin": "none",
+    "key": "<c-l>",
+    "action": ":wincmd l<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Source the vim configuration file",
+    "plugin": "none",
+    "key": "<leader>vs",
+    "action": "<cmd>source $MYVIMRC<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Edit the vim configuration file",
+    "plugin": "none",
+    "key": "<leader>ve",
+    "action": "<cmd>e $MYVIMRC<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Format the code of the current file using LSP [none-ls]",
+    "plugin": "none-ls",
+    "key": "<leader>fc",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Open documentation pane for symbol under cursor",
+    "plugin": "nvim-lspconfig",
+    "key": "<leader>d",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Go to definition of symbol under cursor",
+    "plugin": "nvim-lspconfig",
+    "key": "<leader>gt",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Go to implementation of symbol under cursor",
+    "plugin": "nvim-lspconfig",
+    "key": "<leader>gi",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Open the code actions pane to help fix errors in your code",
+    "plugin": "nvim-lspconfig",
+    "key": "<leader>ca",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Rename the symbol under the cursor",
+    "plugin": "nvim-lspconfig",
+    "key": "<leader>rn",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Telescope find git files [telescope.nvim]",
+    "plugin": "telescope.nvim",
+    "key": "<C-p>",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Telescope find files [telescope.nvim]",
+    "plugin": "telescope.nvim",
+    "key": "<C-P>",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Telescope live grep [telescope.vim]",
+    "plugin": "telescope.vim",
+    "key": "<leader>fg",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Telescope vim buffers [telescope.vim]",
+    "plugin": "telescope.vim",
+    "key": "<leader>fb",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Preview Git hunk [gitsigns.nvim]",
+    "plugin": "gitsigns.nvim",
+    "key": "<leader>gp",
+    "action": ":Gitsigns preview_hunk<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Search for a session [rmagatti/auto-session]",
+    "plugin": "auto-session",
+    "key": "<leader>ls",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Navigate to the left tmux pane [vim-tmux-navigator]",
+    "plugin": "vim-tmux-navigator",
+    "key": "<c-h>",
+    "action": "<cmd>TmuxNavigateLeft<cr>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Navigate to the bottom tmux pane [vim-tmux-navigator]",
+    "plugin": "vim-tmux-navigator",
+    "key": "<c-j>",
+    "action": "<cmd>TmuxNavigateDown<cr>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Navigate to the top tmux pane [vim-tmux-navigator]",
+    "plugin": "vim-tmux-navigator",
+    "key": "<c-k>",
+    "action": "<cmd>TmuxNavigateUp<cr>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Navigate to the right tmux pane [vim-tmux-navigator]",
+    "plugin": "vim-tmux-navigator",
+    "key": "<c-l>",
+    "action": "<cmd>TmuxNavigateRight<cr>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Navigate to the previous tmux pane [vim-tmux-navigator]",
+    "plugin": "vim-tmux-navigator",
+    "key": "<c-\\>",
+    "action": "<cmd>TmuxNavigatePrevious<cr>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Ask copilot [CopilotC-Nvim/CopilotChat.nvim]",
+    "plugin": "CopilotChat",
+    "key": "<leader>cop",
+    "action": "function",
+    "mode": [
+      "n",
+      "v"
+    ]
+  },
+  {
+    "desc": "Ask copilot for a file [CopilotC-Nvim/CopilotChat.nvim]",
+    "plugin": "CopilotChat",
+    "key": "<leader>cof",
+    "action": "function",
+    "mode": [
+      "n",
+      "v"
+    ]
+  },
+  {
+    "desc": "Ask copilot for a help [CopilotC-Nvim/CopilotChat.nvim]",
+    "plugin": "CopilotChat",
+    "key": "<leader>coh",
+    "action": "function",
+    "mode": [
+      "n",
+      "v"
+    ]
+  },
+  {
+    "desc": "Run the nearest test [vim-test]",
+    "plugin": "vim-test",
+    "key": "<leader>t",
+    "action": ":TestNearest<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Run all tests in the current file [vim-test]",
+    "plugin": "vim-test",
+    "key": "<leader>T",
+    "action": ":TestFile<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Run the entire test suite [vim-test]",
+    "plugin": "vim-test",
+    "key": "<leader>A",
+    "action": ":TestSuite<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Run the last test [vim-test]",
+    "plugin": "vim-test",
+    "key": "<leader>l",
+    "action": ":TestLast<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Visit the last test file [vim-test]",
+    "plugin": "vim-test",
+    "key": "<leader>g",
+    "action": ":TestVisit<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Toggle Neotree file explorer [neo-tree.nvim]",
+    "plugin": "neo-tree.nvim",
+    "key": "<leader>nt",
+    "action": ":Neotree toggle<CR>",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Add file to Harpoon list",
+    "plugin": "harpoon",
+    "key": "<leader>a",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Toggle Harpoon list",
+    "plugin": "harpoon",
+    "key": "<C-e>",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Select 1st file in Harpoon list",
+    "plugin": "harpoon",
+    "key": "<leader>q",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Select 2nd file in Harpoon list",
+    "plugin": "harpoon",
+    "key": "<leader>w",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Select 3rd file in Harpoon list",
+    "plugin": "harpoon",
+    "key": "<leader>e",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Select 4th file in Harpoon list",
+    "plugin": "harpoon",
+    "key": "<leader>r",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Go to previous file in Harpoon list",
+    "plugin": "harpoon",
+    "key": "<S-Q>",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Go to next file in Harpoon list",
+    "plugin": "harpoon",
+    "key": "<S-W>",
+    "action": "function",
+    "mode": [
+      "n"
+    ]
+  },
+  {
+    "desc": "Show Git blame for the current file [vim-fugitive]",
+    "plugin": "vim-fugitive",
+    "key": "<leader>gb",
+    "action": ":Git blame<CR>",
+    "mode": [
+      "n"
+    ]
+  }
+]

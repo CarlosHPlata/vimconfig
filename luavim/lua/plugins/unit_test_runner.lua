@@ -20,29 +20,29 @@ return {
 			"n",
 			"<leader>t",
 			":TestNearest<CR>",
-			{ silent = true, desc = "Run the nearest test [vim-test]" },
+			{ silent = true, desc = "Run the nearest test" },
       "vim-test"
 		)
 		Keymap(
 			"n",
 			"<leader>T",
 			":TestFile<CR>",
-			{ silent = true, desc = "Run all tests in the current file [vim-test]" },
+			{ silent = true, desc = "Run all tests in the current file" },
       "vim-test"
 		)
 		Keymap(
 			"n",
-			"<leader>a",
+			"<leader>A",
 			":TestSuite<CR>",
-			{ silent = true, desc = "Run the entire test suite [vim-test]" },
+			{ silent = true, desc = "Run the entire test suite" },
       "vim-test"
 		)
-		Keymap("n", "<leader>l", ":TestLast<CR>", { silent = true, desc = "Run the last test [vim-test]" }, "vim-test")
+		Keymap("n", "<leader>l", ":TestLast<CR>", { silent = true, desc = "Run the last test" }, "vim-test")
 		Keymap(
 			"n",
 			"<leader>g",
 			":TestVisit<CR>",
-			{ silent = true, desc = "Visit the last test file [vim-test]" },
+			{ silent = true, desc = "Visit the last test file" },
       "vim-test"
 		)
 	end,
