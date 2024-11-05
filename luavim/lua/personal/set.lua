@@ -22,6 +22,7 @@ vim.cmd("set showcmd")          -- Show (partial) command in the last line of th
 vim.cmd("set encoding=utf-8")   -- Set the encoding to UTF-8
 vim.cmd("set relativenumber")           -- Show line numbers
 
+vim.opt.conceallevel = 1 -- Enable concealing text
 
 vim.opt.smartindent = true -- Enable smart indent to automatically insert indent where needed
 vim.opt.wrap = false -- Disable line wrapping meaning that long lines will not wrap to the next line
