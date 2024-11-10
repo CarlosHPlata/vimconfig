@@ -8,20 +8,33 @@
 --- My Wezterm config file
 local wezterm = require("wezterm")
 
+------------------- my own variables (change this with your own values)
+
+--this initializes where the executable of powershell for WINDOWS is located
+local DEFAULT_PROG =
+"C:\\Users\\carl_\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe"
+-- to init a different domain
+local WSL_DOMAIN = "WSL:Ubuntu-20.04"
+
+local DEFAULT_OPACITY = 0.95
+local TOGGLE_OPACITY = 1
+
+local COLOR_SCHEME = "Tokyo Night"
+
+-------------------
+
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 config.window_decorations = "RESIZE"
-config.default_prog =
-{ "C:\\Users\\carl_\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe" }
+config.default_prog = { DEFAULT_PROG }
 
-config.color_scheme = "Tokyo Night"
+config.color_scheme = COLOR_SCHEME
 config.font = wezterm.font_with_fallback({
-  -- { family="Fira Code", weight="Regular" },
   { family = "JetBrains Mono", weight = "Regular" },
 })
-config.window_background_opacity = 0.95
+config.window_background_opacity = DEFAULT_OPACITY
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
@@ -31,6 +44,17 @@ config.inactive_pane_hsb = {
   saturation = 0.24,
   brightness = 0.5,
 }
+
+wezterm.on("toggle-opacity", function(window, _)
+  local overrides = window:get_config_overrides() or {}
+  if not overrides.window_background_opacity then
+    overrides.window_background_opacity = TOGGLE_OPACITY
+  else
+    overrides.window_background_opacity = nil
+  end
+
+  window:set_config_overrides(overrides)
+end)
 
 -- keybindings
 config.leader = { key = "x", mods = "CTRL", timeout_milliseconds = 1000 }
@@ -44,7 +68,7 @@ config.keys = {
         { Foreground = { AnsiColor = "Fuchsia" } },
         { Text = "Rename tab:" },
       }),
-      action = wezterm.action_callback(function(window, pane, line)
+      action = wezterm.action_callback(function(window, _, line)
         if line then
           window:active_tab():set_title(line)
         end
@@ -58,11 +82,11 @@ config.keys = {
       title = "Open New Tab",
       choices = {
         {
-          label = "📜 Powershell",
+          label = "Powershell",
           id = "powershell",
         },
         {
-          label = "📜 WSL",
+          label = "WSL",
           id = "wsl",
         },
       },
@@ -72,12 +96,17 @@ config.keys = {
         elseif id == "powershell" then
           window:perform_action(wezterm.action.SpawnTab("DefaultDomain"), pane)
         elseif id == "wsl" then
-          window:perform_action(wezterm.action.SpawnTab({ DomainName = "WSL:Ubuntu-20.04" }), pane)
+          window:perform_action(wezterm.action.SpawnTab({ DomainName = WSL_DOMAIN }), pane)
         else
           wezterm.log_info("unknown id: ", id)
         end
       end),
     }),
+  },
+  {
+    key = "o",
+    mods = "LEADER",
+    action = wezterm.action.EmitEvent("toggle-opacity"),
   },
   -- tabs
   {
