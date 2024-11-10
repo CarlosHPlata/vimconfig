@@ -1,4 +1,6 @@
-# Welcome to my vim configurations
+# Welcome to my dot configurations
+
+Here you will find configurations for all my own set of files.
 
 to automatically copy your damn files to this repo just run:
 
