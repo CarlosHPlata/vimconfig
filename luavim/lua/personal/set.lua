@@ -20,7 +20,7 @@ vim.cmd("set clipboard+=unnamedplus") -- Use the system clipboard for all operat
 vim.cmd("syntax enable")       -- Enable syntax highlighting
 vim.cmd("set showcmd")          -- Show (partial) command in the last line of the screen
 vim.cmd("set encoding=utf-8")   -- Set the encoding to UTF-8
-vim.cmd("set relativenumber")           -- Show line numbers
+vim.cmd("set number relativenumber")           -- Show line numbers
 
 vim.opt.conceallevel = 1 -- Enable concealing text
 
