@@ -25,6 +25,11 @@ vim.keymap.set('i', '(<cr>', '(<cr>)<C-o><S-o>', { silent = true, desc = "Auto-c
 vim.keymap.set('i', '[<cr>', '[<cr>]<C-o><S-o>', { silent = true, desc = "Auto-close square brackets with newline" })
 vim.keymap.set('i', '<<cr>', '<<cr>><C-o><S-o>', { silent = true, desc = "Auto-close angle brackets with newline" })
 
+-- Close brackets automatically, with spaces
+vim.keymap.set('i', '{<SPACE>', '{<SPACE><SPACE>}<Left><Left>', { silent = true, desc = "Auto-close square brackets with newline" })
+vim.keymap.set('i', '(<SPACE>', '(<SPACE><SPACE>)<Left><Left>', { silent = true, desc = "Auto-close square brackets with newline" })
+vim.keymap.set('i', '[<SPACE>', '[<SPACE><SPACE>]<Left><Left>', { silent = true, desc = "Auto-close square brackets with newline" })
+
 -- Close brackets without return
 vim.keymap.set('i', '(', '()<Left>', { silent = true, desc = "Auto-close parentheses" })
 vim.keymap.set('i', '{', '{}<Left>', { silent = true, desc = "Auto-close curly braces" })
